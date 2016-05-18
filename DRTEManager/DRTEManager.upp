@@ -1,0 +1,20 @@
+uses
+	DRTEngine/DRTECore;
+
+library(MSC8ARM) ws2.lib;
+
+library(LINUX) bluetooth;
+
+link(MSC8ARM) /NODEFAULTLIB:"oldnames.lib";
+
+file
+	DRTEManager.cpp,
+	DRTEManager.h,
+	main_manager.cpp,
+	RenderNode.cpp,
+	RenderNode.h;
+
+mainconfig
+	"" = "GUI MT",
+	"" = "MT";
+

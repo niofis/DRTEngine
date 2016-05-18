@@ -1,0 +1,32 @@
+uses
+	Core,
+	CtrlCore,
+	CtrlLib,
+	DRTEngine/DRTECore,
+	DRTEngine/SDL_gfx;
+
+library(MSC) "SDL SDLmain";
+
+library(GCC WIN32) "SDL.dll SDLmain";
+
+library(LINUX) "SDL SDLmain";
+
+library(FREEBSD) "SDL SDLmain X11 Xext Xrandr Xrender aa usbhid ncurses";
+
+library(MSC8ARM) ws2.lib;
+
+link(MSC8ARM) "/NODEFAULTLIB:\"oldnames.lib\" ";
+
+file
+	DRTEClient.h,
+	DRTEClient.cpp,
+	DRTEPresentation.cpp,
+	DRTEPresentation.h,
+	opciones.lay,
+	opciones.h,
+	opciones.cpp,
+	main.cpp;
+
+mainconfig
+	"" = "GUI MT";
+

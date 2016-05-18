@@ -1,0 +1,4 @@
+#ifndef _DRTEngine_DRTEManager_icpp_init_stub
+#define _DRTEngine_DRTEManager_icpp_init_stub
+#include "DRTEngine/DRTECore/init"
+#endif

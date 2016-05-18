@@ -1,0 +1,79 @@
+flags(NOTMFC) "!GUI !CONSOLE";
+
+library(WIN32 !MSC8ARM) "ws2_32 zlib";
+
+library(MSC8ARM) "coredll.lib corelibc.lib ole32.lib oleaut32.lib uuid.lib commctrl.lib ccrtrtti.lib zlibce.lib";
+
+library(LINUX) "z pthread";
+
+library(MSC8ARM) ws2.lib;
+
+options(MSC8ARM) " /fp:fast -DNO_ERRNO_H -D_WIN32_WCE -DARM -D_ARM_ -DUNDER_CE -DUNICODE -D_UNICODE";
+
+link(MSC) /NODEFAULTLIB:MSVCRT;
+
+link(MSC8ARM) /NODEFAULTLIB:"oldnames.lib";
+
+link(MSC8ARM) " /subsystem:windowsce,4.20 /machine:ARM /ARMPADCODE /FORCE:MULTIPLE";
+
+file
+	Camera.cpp,
+	Camera.h,
+	Color.cpp,
+	Color.h,
+	crc32.h,
+	debug.h,
+	deflate.h,
+	DRTECore.h,
+	DRTEScene.cpp,
+	DRTEScene.h,
+	globals.h,
+	defines.h,
+	multi_platform.h,
+	Group.cpp,
+	Group.h,
+	Image.cpp,
+	Image.h,
+	inffast.h,
+	inffixed.h,
+	inflate.h,
+	inftrees.h,
+	Light.cpp,
+	Light.h,
+	Material.cpp,
+	Texture.cpp,
+	Texture.h,
+	Material.h,
+	MS3DFile.cpp,
+	MS3DFile.h,
+	Network.cpp,
+	Network.h,
+	Node.cpp,
+	Node.h,
+	Object.cpp,
+	Object.h,
+	Package.cpp,
+	Package.h,
+	Ray.cpp,
+	Ray.h,
+	Sphere.cpp,
+	Sphere.h,
+	Stream.cpp,
+	Stream.h,
+	trees.h,
+	Triangle.cpp,
+	Triangle.h,
+	Update.cpp,
+	Update.h,
+	Vector.cpp,
+	Vector.h,
+	Work.cpp,
+	Work.h,
+	zconf.h,
+	zconf.in.h,
+	zlib.h,
+	zutil.h;
+
+mainconfig
+	"" = "DLL GUI CONSOLE";
+

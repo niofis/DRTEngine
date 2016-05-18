@@ -1,0 +1,17 @@
+LAYOUT(OptionsLayout, 320, 174)
+	ITEM(Label, lblDir, SetLabel(t_("Dirección del Manager:")).SetAlign(ALIGN_RIGHT).LeftPosZ(13, 115).TopPosZ(15, 19))
+	ITEM(EditField, txtManager, LeftPosZ(130, 93).TopPosZ(16, 19))
+	ITEM(Label, lblEscena, SetLabel(t_("Escena:")).SetAlign(ALIGN_RIGHT).LeftPosZ(13, 115).TopPosZ(40, 19))
+	ITEM(EditField, txtEscena, LeftPosZ(129, 94).TopPosZ(40, 19))
+	ITEM(Button, btnBuscar, SetLabel(t_("Buscar")).LeftPosZ(229, 77).TopPosZ(40, 20))
+	ITEM(Label, lblFPS, SetLabel(t_("FPS:")).SetAlign(ALIGN_RIGHT).LeftPosZ(91, 36).TopPosZ(64, 19))
+	ITEM(EditInt, txtFPS, Min(0).Max(999).MaxChars(3).LeftPosZ(129, 39).TopPosZ(64, 19))
+	ITEM(Label, lblDimensiones, SetLabel(t_("Dimensiones:")).SetAlign(ALIGN_RIGHT).LeftPosZ(13, 114).TopPosZ(88, 19))
+	ITEM(EditInt, txtAlto, Min(0).Max(99999).MaxChars(5).LeftPosZ(129, 54).TopPosZ(109, 19))
+	ITEM(Label, lblAncho, SetLabel(t_("Ancho")).LeftPosZ(186, 39).TopPosZ(87, 19))
+	ITEM(Label, lblAlto, SetLabel(t_("Alto")).LeftPosZ(186, 25).TopPosZ(108, 19))
+	ITEM(Button, btnSalir, SetLabel(t_("Salir")).LeftPosZ(224, 80).TopPosZ(137, 27))
+	ITEM(Button, btnConectar, SetLabel(t_("Conectar")).HCenterPosZ(81, 15).TopPosZ(137, 27))
+	ITEM(EditInt, txtAncho, Min(0).Max(999).MaxChars(5).LeftPosZ(129, 54).TopPosZ(87, 19))
+END_LAYOUT
+

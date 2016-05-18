@@ -1,0 +1,25 @@
+library(MSC) "SDL SDLmain";
+
+library(GCC WIN32) "SDL.dll SDLmain";
+
+library(LINUX) "SDL SDLmain";
+
+library(FREEBSD) "SDL SDLmain X11 Xext Xrandr Xrender aa usbhid ncurses";
+
+file
+	SDL_framerate.c,
+	SDL_framerate.h,
+	SDL_gfx.h,
+	SDL_gfxBlitFunc.c,
+	SDL_gfxBlitFunc.h,
+	SDL_gfxPrimitives.c,
+	SDL_gfxPrimitives.h,
+	SDL_gfxPrimitives_font.h,
+	SDL_imageFilter.c,
+	SDL_imageFilter.h,
+	SDL_rotozoom.c,
+	SDL_rotozoom.h;
+
+mainconfig
+	"" = "";
+

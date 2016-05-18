@@ -1,0 +1,22 @@
+uses
+	DRTEngine/DRTECore;
+
+library(MSC8ARM) ws2.lib;
+
+library(MSC8ARM) "coredll.lib corelibc.lib ole32.lib oleaut32.lib uuid.lib commctrl.lib ccrtrtti.lib zlibce.lib";
+
+link(MSC8ARM) /NODEFAULTLIB:"oldnames.lib";
+
+link(MSC8ARM) " /subsystem:windowsce,4.20 /machine:ARM /ARMPADCODE /FORCE:MULTIPLE";
+
+file
+	DRTEngine.cpp,
+	DRTEngine.h,
+	DRTEServer.cpp,
+	DRTEServer.h,
+	main.cpp;
+
+mainconfig
+	"" = "GUI MT",
+	"" = "MT";
+
